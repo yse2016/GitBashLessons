@@ -70,4 +70,17 @@ yt@20161213
   ls
   ```
 
+11. Git Bashで、masterブランチに、他のブランチ( testとか )を、merge(マージ)する.
+
+  ```bash
+  cd
+  cd documents
+  cd github
+  cd 160136
+  git branch
+  git checkout master
+  git merge test
+  ls
+  ```
+
 end.
