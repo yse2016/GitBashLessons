@@ -83,4 +83,16 @@ yt@20161213
   ls
   ```
 
+12. Git Bashで、新しいブランチをつくる.
+
+  ```bash
+  cd
+  cd documents
+  cd github
+  cd 160999               <-リポジトリのdirに入る
+  git branch
+  git checkout -b 新しいブランチ名
+  git branch
+  ```
+
 end.
