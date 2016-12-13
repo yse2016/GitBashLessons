@@ -95,4 +95,17 @@ yt@20161213
   git branch
   ```
 
+13. Git Bashで、ブランチを削除(delete)する.
+
+  ```bash
+  cd
+  cd documents
+  cd github
+  cd 160999          <- リポジトリのdirに入る
+  git branch
+  git checkout master
+  git branch -d 削除するブランチ名
+  git branch
+  ```
+
 end.
