@@ -34,7 +34,7 @@ yt@20161213
   cd documents
   cd github
   ls
-  cd 160xxx          <- リポジトリのdirに入る
+  cd 160xxx
   ls
   cd 20161213
   ls
