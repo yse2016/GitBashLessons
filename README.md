@@ -76,7 +76,7 @@ yt@20161213
   cd
   cd documents
   cd github
-  cd 160136
+  cd 160136                <- リポジトリのdirに入る
   git branch
   git checkout master
   git merge test
