@@ -40,7 +40,7 @@ yt@20161213
   ls
   ```
 
-8. Git Bashで、Commit する.
+8. Git Bashで、Commit する.( 必要なときに実行してください )
 
   ```bash
   git status
@@ -49,11 +49,25 @@ yt@20161213
   git status
   ```
 
-9. Git Bashで、push( sync )する.
+9. Git Bashで、push( sync )する.( 必要なときに実行してください )
 
   ```bash
   git status
   git push origin master
+  ```
+
+10. Git Bashで、clone する.( 必要なときに実行してください )
+
+  ```bash
+  cd
+  cd documents
+  cd github
+  pwd
+  ls
+  git clone https://github.com/YSE2016/GitHubLessons.git
+  ls
+  cd GitHubLessons
+  ls
   ```
 
 end.
