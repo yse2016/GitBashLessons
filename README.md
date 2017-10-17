@@ -1,6 +1,6 @@
 # GitBashLessons
 Git Bashをはじめてインストールして使う際の導入レッスン。
-yt@20161213
+yt@20161213, 20171017
 
 
 ## Git Bash( Git for Windows )をインストールする.
@@ -12,7 +12,15 @@ yt@20161213
 
 ## Git Bashをつかう
 
-1. Explorerで、HomeDir( c:\Users\160xxx )を開く.
+目的は、ファイル・フォルダ（ディレクトリ; directory）の操作を経験してGitBashに慣れること。
+
+MacユーザはGitBashの代わりに「terminal」を使用してください。
+
+WindowsPCでの個人フォルダ( HomeDir; ホームディレクトリ )が次の場所にあるとします。もちろん実際にはユーザ名もフォルダ名も異なると思います。適当に読み替えてください。
+
+`c:\Users\170xxx`
+
+1. エクスプローラ( Explorer )で、HomeDir( c:\Users\170xxx )を開く.
 2. ↑ウィンドウを、画面の右半分に表示する.
 3. Git Bashを起動する.
 4. ↑ウィンドウを、画面の左半分に表示する.
@@ -22,90 +30,90 @@ yt@20161213
   pwd
   ```
 
+  ↑ExplorerとGit Bash両方とも同じHomeDirにアクセスしていることを確認します。
+
 6. Git Bashで、「現在のdirにある file, dir のリストを表示」する.
 
   ```bash
   ls
   ```
 
-7. Git Bashで、GitHubのdir( 160xxx > 20161213 )に移動する.
+  ↑わりとたくさん表示されます。ふだん表示されないものもあります。それらは「隠しフォルダ」です。ExplorerとGit Bashで共通しているものを探します。同じHomeDirにアクセスしていると実感します。
+
+  次にファイルやdir（ディレクトリ=フォルダ）を操作します。
+
+7. 新しいdirを作成し、その中に入る（そのdirを開く; そのdirにアクセスする）。
+
+  Git Bashで次のコマンドを打ち込み enterキー を押下してください。"test4bash"という名前のdirができます。
+
+  Git Bash等、コマンドで操作する時はいつも最後に enterキー を打って実行させます。
 
   ```bash
-  cd documents
-  cd github
-  ls
-  cd 160xxx
-  ls
-  cd 20161213
+  mkdir test4bash
+  ```
+
+  Explorerのウィンドウに"test4bash"が出現したことを確認してください。
+
+  Git Bashでも"test4bash"を確認しましょう。`ls`コマンドを実行します。
+
+  ```bash
   ls
   ```
 
-8. Git Bashで、Commit する.( 必要なときに実行してください )
+  以下、同様にコマンド操作の結果をGit BashでもExplorerでも確認します。
+
+  注)."<- 〜"はコマンドの説明です。読むだけにして、入力しないでください。
 
   ```bash
-  git status
-  git add .
-  git commit -m "ShowText.java updated."          <- 必要なコメントを書く.
-  git status
+  cd test4bash        <- test4bashに移動する
+  pwd           <- 現在のdirを確認する
   ```
 
-9. Git Bashで、push( sync )する.( 必要なときに実行してください )
+  Explorerでも"test4bash"フォルダをダブルクリックして開きます。
+
+
+8. ファイルを作成・コピー・移動・削除する
+
+  ファイルを一つ作成し、コピーして２つにします。
 
   ```bash
-  git status
-  git push origin master
-  ```
-
-10. Git Bashで、clone する.( 必要なときに実行してください )
-
-  ```bash
-  cd
-  cd documents
-  cd github
-  pwd
+  touch test.doc      <- test.docというファイルを作る
   ls
-  git clone https://github.com/YSE2016/GitHubLessons.git
-  ls
-  cd GitHubLessons
+  cp test.doc  test2.doc    <- test.docをコピーしてtest2.docを作る
   ls
   ```
 
-11. Git Bashで、masterブランチに、他のブランチ( testとか )を、merge(マージ)する.
+  新しいdirを作成し、その中にファイルを一つ移動させます。
 
   ```bash
-  cd
-  cd documents
-  cd github
-  cd 160136                <- リポジトリのdirに入る
-  git branch
-  git checkout master
-  git merge test
+  mkdir docDir
   ls
+  mv test2.doc docDir     <- test2.docを、docDirの中に移動(move)させる
+  ls
+  ls docDir       <- docDirの中にあるファイルを表示させる
+  rm test.doc     <- test.docを削除(remove)する
+  ls
+  rm docDir/test2.doc     <- docDirの中のtest2.docを削除する
+  ls docDir
+  ls
+  rmdir docDir    <- docDirを削除する(remove directory)
   ```
 
-12. Git Bashで、新しいブランチをつくる.
+
+9. Git Bashを終了する
+
+  作成したdirを削除して、Git Bashを終了します。
 
   ```bash
-  cd
-  cd documents
-  cd github
-  cd 160999               <-リポジトリのdirに入る
-  git branch
-  git checkout -b 新しいブランチ名
-  git branch
-  ```
-
-13. Git Bashで、ブランチを削除(delete)する.
-
-  ```bash
-  cd
-  cd documents
-  cd github
-  cd 160999          <- リポジトリのdirに入る
-  git branch
-  git checkout master
-  git branch -d 削除するブランチ名
-  git branch
+  cd ..             <- ひとつ上のdir（HomeDirのはず）に移動する
+  rmdir test4bash
+  ls
+  exit        <- Git Bashを終了させる
   ```
+
+
+とりあえず、ここまで。
+
+基本的なコマンドを練習するためのメニューを追加する予定です。yt@20171017
 
 end.
