@@ -104,12 +104,12 @@ WindowsPCでの個人フォルダ( HomeDir; ホームディレクトリ )が次�
 
   作成したdirを削除して、Git Bashを終了します。
 
-  ```bash
+```bash
   cd ..             <- ひとつ上のdir（HomeDirのはず）に移動する
   rmdir test4bash
   ls
   exit        <- Git Bashを終了させる
-  ```
+```
 
 
 とりあえず、ここまで。
